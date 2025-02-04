@@ -9,6 +9,9 @@ export const env = createEnv({
     // CLERK
     CLERK_SECRET_KEY: z.string().min(1),
 
+    // UPLOADTHING
+    UPLOADTHING_TOKEN: z.string().min(1),
+
     // MISC
     NODE_ENV: z.enum(["development", "production", "test"]),
   },
@@ -28,5 +31,8 @@ export const env = createEnv({
     CLERK_SECRET_KEY: process.env.CLERK_SECRET_KEY,
     NEXT_PUBLIC_CLERK_PUBLISHABLE_KEY:
       process.env.NEXT_PUBLIC_CLERK_PUBLISHABLE_KEY,
+
+    // UPLOADTHING
+    UPLOADTHING_TOKEN: process.env.UPLOADTHING_TOKEN,
   },
 });
